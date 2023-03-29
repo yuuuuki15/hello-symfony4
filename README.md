@@ -13,3 +13,6 @@ hello-symfony4(sequel Pro)
 
 #### how to make controller
 ```bin/console make:controller {#name of controller#}```
+
+#### how to connect local database
+```DATABASE_URL="mysql://localhost:8000/hello-symfony4"```
