@@ -1,16 +1,94 @@
+{% block stylelsheet %}
+<style>
+/* ヘッダー全体のスタイル */
+header {
+background-color: #55c500;
+color: #fff;
+height: 70px;
+display: flex;
+align-items: center;
+}
+
+/* ヘッダーコンテナのスタイル */
+.header-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 0 20px;
+}
+
+/* ロゴのスタイル */
+.logo a {
+color: #fff;
+font-size: 24px;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* ナビゲーションのスタイル */
+nav ul {
+display: flex;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+nav li {
+margin: 0 10px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+}
+
+/* 検索ボックスのスタイル */
+.search-box input[type="text"] {
+border: none;
+padding: 10px;
+border-radius: 3px;
+width: 250px;
+margin-right: 10px;
+}
+
+.search-box input[type="text"]:focus {
+outline: none;
+}
+
+/* ユーザーメニューのスタイル */
+.user-menu a {
+color: #fff;
+text-decoration: none;
+margin-left: 10px;
+}
+</style>
+{% endblock %}
+
 {% block header %}
 <header>
-    <div class="header_container">
-        <div class="header_top">
-        </div>
-        <div class="header_bottom">
-            <div class="home_button">
-                <a href="/">ホーム</a>
-            </div>
-            <div class="registration_button">
-                <a href="/register">新規登録</a>
-            </div>
-        </div>
+  <div class="header-container">
+    <div class="logo">
+      <a href="#">Forum</a>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#">投稿する</a></li>
+        <li><a href="#">コミュニティ</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Zine</a></li>
+        <li><a href="#">Teams</a></li>
+      </ul>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="タグでスレッドを検索">
+    </div>
+    <div class="user-menu">
+      <a href="#">ログイン</a>
+      <a href="#">新規登録</a>
+    </div>
+  </div>
 </header>
 {% endblock %}
