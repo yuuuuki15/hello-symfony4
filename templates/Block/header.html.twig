@@ -86,8 +86,15 @@ margin-left: 10px;
       <input type="text" placeholder="タグでスレッドを検索">
     </div>
     <div class="user-menu">
+
+    {% if app.user %}
+      <a href="/logout">ログアウト</a>
+      <a href="/mypage">マイページ</a>
+    {% else %}
       <a href="/login">ログイン</a>
       <a href="/register">新規登録</a>
+    {% endif %}
+
     </div>
   </div>
 </header>
