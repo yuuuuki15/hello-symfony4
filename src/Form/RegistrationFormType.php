@@ -43,6 +43,13 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('name', [
+                'constraints' => [
+                    new Length([
+                        'max' => 20,
+                    ]),
+                ],
+            ])
         ;
     }
 
