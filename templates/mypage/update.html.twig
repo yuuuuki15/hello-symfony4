@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MypageController!{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+        {{ form_row(form.name)}}
+        {{ form_row(form.email) }}
+
+        <button type="submit" class="btn">Register</button>
+    {{ form_end(form) }}
+{% endblock %}

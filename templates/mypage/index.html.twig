@@ -3,10 +3,8 @@
 {% block title %}Hello MypageController!{% endblock %}
 
 {% block body %}
-{{ form_start(form) }}
-        {{ form_row(form.name)}}
-        {{ form_row(form.email) }}
+name: {{app.user.name}}<br/>
+email: {{app.user.email}}<br/>
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(form) }}
+<a href="/mypage/update">編集</a>
 {% endblock %}
